@@ -1,11 +1,19 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
+
+import { RootProvider } from './context'
+import BasicLayout from './components/layouts/BasicLayout'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      SSSS三ss
-
+      <RootProvider >
+        <HashRouter>
+          <BasicLayout />
+        </HashRouter>
+      </RootProvider>
     </div>
   );
 }
